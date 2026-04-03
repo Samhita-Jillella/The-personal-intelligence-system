@@ -24,6 +24,21 @@
             <p id="resultText"></p>
         </div>
     </div>
+    
+    <div class = "container">
+        <h1> Personal Intelligence system</h1>
+        <p>A simple daily dashboard for users to log in data on  how they spent their day, sleep, work, exercise, mood and energy levels. Patterns are analzyed and identified in order to improve productivity and well-being. The causes of burnout or stress are listed. The goal: helping users make smarter decisions by relying on facts instead of feelings. After 30-60 days, the system analyzes their personal data to detect patterns and predict how likely they are to feel productive or experience burnout.</p>
+        <button> Date </button> <!-- Try to make a drop down calender-->
+        <button onclick="document.getElementById('picker').showPicker()">Date</button>
+        <input type = "data" id = "picker" style = "display:none;">
+        <button> Sleep Hours</button>
+        <button> Mood </button>
+        <button> Energy </button>
+        <button> Work Hours </button>
+        <button> Exercise Minutes </button>
+        <button> Stress </button>
+        <button> Notes </button>
+    </div>
 
     <script>
         function callAPI() {
