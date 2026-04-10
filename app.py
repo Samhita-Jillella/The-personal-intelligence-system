@@ -1,6 +1,8 @@
 from flask import Flask, render_template, jsonify
+from analytics import analytics_bp
 
 app = Flask(__name__)
+app.register_blueprint(analytics_bp)
 
 @app.route('/')
 def index():
