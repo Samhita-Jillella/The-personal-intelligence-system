@@ -30,23 +30,53 @@
         <p>A simple daily dashboard for users to log in data on  how they spent their day, sleep, work, exercise, mood and energy levels. Patterns are analzyed and identified in order to improve productivity and well-being. The causes of burnout or stress are listed. The goal: helping users make smarter decisions by relying on facts instead of feelings. After 30-60 days, the system analyzes their personal data to detect patterns and predict how likely they are to feel productive or experience burnout.</p>
         <!-- Try to make a drop down calender-->
         <!--DATE BUTTON-->
-        <button id="dateButton">Date</button>
-        <!--HIDDEN DATE INPUT-->
-        <input type="date" id="datePicker" style="opacity:0; position:absolute; left:-9999px;">
+         <form action="/dashboard.html" method="POST" class="form-container">
 
-        <title> Sleep Hours</title> <input type = "sleep" name="sleep"> </input>
-        <button> Mood </button>
-        <button> Energy </button>
-        <button> Work Hours </button>
-        <button> Exercise Minutes </button>
-        <button> Stress </button>
-        <button> Notes </button>
+        <div class="form-row">
+            <label>Date (dd/mm/yyyy):</label>
+            <input type="text" name="date" placeholder="dd/mm/yyyy">
+        </div>
+
+        <div class="form-row">
+            <label>Sleep:</label>
+            <input type="text" name="sleep">
+        </div>
+
+        <div class="form-row">
+            <label>Mood:</label>
+            <input type="text" name="mood">
+        </div>
+
+        <div class="form-row">
+            <label>Energy:</label>
+            <input type="text" name="energy">
+        </div>
+
+        <div class="form-row">
+            <label>Work Hours:</label>
+            <input type="text" name="work">
+        </div>
+
+        <div class="form-row">
+            <label>Exercise Minutes:</label>
+            <input type="text" name="exercise">
+        </div>
+
+        <div class="form-row">
+            <label>Stress:</label>
+            <input type="text" name="stress">
+        </div>
+
+        <div class="form-row">
+            <label>Notes:</label>
+            <input type="text" name="notes">
+        </div>
+
+        <button type="submit" class="submit-btn">Submit</button>
+    
+
     </div>
-    <script>
-        document.getElementById("dateButton").addEventListener("click", function() {
-            document.getElementById("datePicker").click(); 
-        });
-    </script>
+   
 
     <script>
         function callAPI() {
